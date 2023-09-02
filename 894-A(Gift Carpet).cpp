@@ -28,7 +28,7 @@ int main()
             if (count == 4)
                 break;
         }
-        if (count)
+        if (count=4)
             cout << "YES" << endl;
         else
             cout << "NO" << endl;
