@@ -1,2 +1,2 @@
-                // else
-                // count=1;
+         s[i]=tolower(s[i]);
+        cout<<"."<<s[i];
