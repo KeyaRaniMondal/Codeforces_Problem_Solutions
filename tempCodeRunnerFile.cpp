@@ -1,2 +1,2 @@
-         s[i]=tolower(s[i]);
-        cout<<"."<<s[i];
+        // if (k==v[i+1])
+        //     val = v[i+1];
