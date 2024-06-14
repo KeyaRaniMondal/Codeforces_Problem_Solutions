@@ -8,9 +8,13 @@ using namespace std;
 int main()
 {
     fio;
-    ll n, k, val,val1;
-    cin >> n >> k;
-
-    cout<<val1-val<<endl;
+    set<ll> s;
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+    s.insert(a);
+    s.insert(b);
+    s.insert(c);
+    s.insert(d);
+    cout << 4 - s.size() << endl;
     return 0;
 }
