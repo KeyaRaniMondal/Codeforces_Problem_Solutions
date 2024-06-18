@@ -4,18 +4,16 @@ using namespace std;
     ios_base::sync_with_stdio(false); \
     cin.tie(NULL)
 #define ll long long
+
 int main()
 {
     fio;
-    ll n, count = 0;
-    cin >> n;
-    int arr[5] = {100, 20, 10, 5, 1};
-    for (int i = 0; i < 5; ++i)
+    ll k, l, m, n, d, count = 0;
+    cin >> k >> l >> m >> n >> d;
+    for (int i = 1; i <= d; ++i)
     {
-        count += n / arr[i];
-        // cout<<count;
-        n %= arr[i];
-        //cout << n << "  ";
+        if (i % k == 0 || i % l == 0 || i % m == 0 || i % n == 0)
+            count++;
     }
     cout << count << endl;
     return 0;

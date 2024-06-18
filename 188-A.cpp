@@ -8,9 +8,12 @@ using namespace std;
 int main()
 {
     fio;
-    ll n, k, val,val1;
+    ll n, k;
     cin >> n >> k;
-
-    cout<<val1-val<<endl;
+    ll a = (n + 1) / 2;
+    if (a >= k)
+        cout << 2 * k - 1 << endl;
+    else
+        cout << (k - a) * 2 << endl;
     return 0;
 }
