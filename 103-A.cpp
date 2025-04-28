@@ -7,25 +7,36 @@ using namespace std;
 
 int main()
 {
-    fio;
-    int n, count = 0;
+    ll n;
     cin >> n;
-    vector<int> v(n);
-    for (int i = 0; i < n; ++i)
-        cin >> v[i];
-    for (int i = 0; i < n - 1; ++i)
+    vector<ll> h(n);
+    for (ll i = 0; i < n; ++i)
+        cin >> h[i];
+    ll maxh = *max_element(h.begin(), h.end());
+    ll max_pos = -1;
+    for (ll i = 0; i < n; ++i)
     {
-        if (v[i] > v[i + 1])
+        if (h[i] == maxh)
         {
-            v[0] = v[i];
-            count++;
-        }
-        if (v[i] < v[i + 1])
-        {
-            v[n - 1] = v[i];
-            count++;
+            max_pos = i;
+            break;
         }
     }
-    cout << count << endl;
+    ll minh = *min_element(h.begin(), h.end());
+    ll min_pos = -1;
+    for (ll i = n - 1; i >= 0; --i)
+    {
+        if (h[i] == minh)
+        {
+            min_pos = i;
+            break;
+        }
+    }
+    ll swap = max_pos + (n - 1 - min_pos);
+    if (max_pos > min_pos)
+    {
+        swap--;
+    }
+    cout << swap << endl;
     return 0;
 }
